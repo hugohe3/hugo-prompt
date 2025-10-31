@@ -11,6 +11,55 @@
 
 请根据我下方提供的本节课程的 SRT 字幕文件内容，为我生成一份该主题的知识要点总结。
 
+## 工作流程图
+
+```mermaid
+flowchart TD
+    Start([收到SRT字幕]) --> Parse[解析课程内容]
+    
+    Parse --> Identify[识别主题]
+    Identify --> Core[提取核心概念]
+    
+    Core --> Part1[核心目的与概念]
+    Part1 --> P1_1[一句话概括]
+    Part1 --> P1_2[3-5个核心术语]
+    
+    Core --> Part2[核心语法与函数]
+    Part2 --> P2_1[基础语法结构]
+    Part2 --> P2_2[关键函数/方法]
+    Part2 --> P2_3[3-5个代码示例]
+    Part2 --> P2_4[对比表格]
+    
+    Core --> Part3[实践应用场景]
+    Part3 --> P3_1[实际开发场景]
+    Part3 --> P3_2[数据分析应用]
+    
+    Core --> Part4[常见问题与易错点]
+    Part4 --> P4_1[初学者易错]
+    Part4 --> P4_2[排错思路]
+    
+    P1_2 --> Format[Markdown格式化]
+    P2_4 --> Format
+    P3_2 --> Format
+    P4_2 --> Format
+    
+    Format --> Quality[质量检查]
+    Quality --> Q1{结构完整?}
+    Quality --> Q2{代码可运行?}
+    Quality --> Q3{注释清晰?}
+    
+    Q1 --> Output[输出学习笔记]
+    Q2 --> Output
+    Q3 --> Output
+    
+    Output --> End([完成])
+    
+    style Start fill:#e1f5ff
+    style Format fill:#fff4e1
+    style Quality fill:#ffe8e1
+    style End fill:#4caf50,color:#fff
+```
+
 # 总结要求
 
 请严格按照以下结构进行总结，确保内容精准、实用、易于复习：
